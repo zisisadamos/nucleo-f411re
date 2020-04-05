@@ -1,0 +1,40 @@
+[package]
+name = "nucleo-f411re"
+version = "0.1.0"
+authors = ["Zisis Adamos <zisarono@gmail.com>"]
+categories = [
+    "embedded",
+    "no-std",
+]
+description = "Board support crate for the STM32 Nucleo-F411RE microcontroller board"
+edition = "2020"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bare-metal = "0.2.5"
+cortex-m = "0.6.2"
+nb = "0.1.2"
+cortex-m-rt = "0.6.12"
+
+[dependencies.stm32f4xx-hal]
+features = ["stm32f411", "rt"]
+version = "0.7.0"
+
+[dev-dependencies]
+panic-halt = "0.2.0"
+numtoa = "0.2.3"
+vcell = "0.1.2"
+volatile-register = "0.2.0"
+
+[features]
+default = ["rt"]
+rt = []
+
+[profile.dev]
+debug = true
+
+[profile.release]
+debug = true
+lto = true
+opt-level = "s"
