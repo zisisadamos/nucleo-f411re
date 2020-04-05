@@ -1,4 +1,5 @@
 [package]
+license = "0BSD"
 name = "nucleo-f411re"
 version = "0.1.0"
 authors = ["Zisis Adamos <zisarono@gmail.com>"]
@@ -7,7 +8,8 @@ categories = [
     "no-std",
 ]
 description = "Board support crate for the STM32 Nucleo-F411RE microcontroller board"
-edition = "2020"
+edition = "2018"
+repository = "https://github.com/zisisadamos/nucleo-f411re"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
